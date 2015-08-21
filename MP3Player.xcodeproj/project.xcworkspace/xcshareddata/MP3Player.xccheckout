@@ -12,22 +12,34 @@
 	<dict>
 		<key>54B0E7030EDDE928D7BA750CAA0792ACEE1421AD</key>
 		<string>https://github.com/jamestutsplus/CreateAMP3PlayerFinishedProject.git</string>
+		<key>FFA917F23B7EB5A339CED02988E0AE69F56E8DF4</key>
+		<string>https://github.com/jamestutsplus/MP3PlayerAVFoundationFinishedProject.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>MP3Player.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>54B0E7030EDDE928D7BA750CAA0792ACEE1421AD</key>
+		<string>../../../MP3PlayerFinished</string>
+		<key>FFA917F23B7EB5A339CED02988E0AE69F56E8DF4</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/jamestutsplus/CreateAMP3PlayerFinishedProject.git</string>
+	<string>https://github.com/jamestutsplus/MP3PlayerAVFoundationFinishedProject.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>54B0E7030EDDE928D7BA750CAA0792ACEE1421AD</string>
+	<string>FFA917F23B7EB5A339CED02988E0AE69F56E8DF4</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FFA917F23B7EB5A339CED02988E0AE69F56E8DF4</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MP3PlayerAVFoundationFinishedProject</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

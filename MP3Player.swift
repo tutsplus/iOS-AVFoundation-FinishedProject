@@ -46,6 +46,7 @@ class MP3Player: NSObject, AVAudioPlayerDelegate {
         if !player.playing {
              player.play()
 	}
+        
     }
     
     func stop(){

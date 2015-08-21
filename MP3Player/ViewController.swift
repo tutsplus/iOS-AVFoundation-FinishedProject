@@ -11,8 +11,8 @@ import AVFoundation
 
 class ViewController: UIViewController {
     
-    var mp3Player:MP3Player!
-    var timer:NSTimer!
+    var mp3Player:MP3Player?
+    var timer:NSTimer?
     
     @IBOutlet weak var trackName: UILabel!
     @IBOutlet weak var trackTime: UILabel!
@@ -26,42 +26,42 @@ class ViewController: UIViewController {
         setTrackName()
     }
     @IBAction func playSong(sender: AnyObject) {
-        mp3Player.play()
+        mp3Player!.play()
         startTimer()
     }
     @IBAction func stopSong(sender: AnyObject) {
-        mp3Player.stop()
+        mp3Player!.stop()
         updateViews()
         if(timer != nil){
-            timer.invalidate()
+            timer!.invalidate()
         }
     }
     
     @IBAction func pauseSong(sender: AnyObject) {
-        mp3Player.pause()
+        mp3Player!.pause()
         if(timer != nil){
-            timer.invalidate()
+            timer!.invalidate()
         }
     }
 
     @IBAction func playNextSong(sender: AnyObject) {
-        mp3Player.nextSong(false)
+        mp3Player!.nextSong(false)
         startTimer()
     }
     
     
     @IBAction func setVolume(sender: UISlider) {
-        mp3Player.setVolume(sender.value)
+        mp3Player!.setVolume(sender.value)
     }
 
     @IBAction func playPreviousSong(sender: AnyObject) {
-        mp3Player.previousSong()
+        mp3Player!.previousSong()
         startTimer()
     }
     
     func setTrackName(){
         if mp3Player != nil {
-            trackName.text = mp3Player.getCurrentTrackName()
+            trackName.text = mp3Player!.getCurrentTrackName()
         }
     }
     
@@ -73,13 +73,20 @@ class ViewController: UIViewController {
     }
     
     func startTimer(){
-            timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("updateViews"), userInfo: nil, repeats: true)
+            timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("updateViewsWithTimer:"), userInfo: nil, repeats: true)
+    }
+    
+    
+    func updateViewsWithTimer(theTimer: NSTimer){
+        updateViews()
     }
     
     func updateViews(){
-        trackTime.text = mp3Player.getCurrentTimeAsString()
-        progressBar.progress = mp3Player.getProgress()
+        trackTime.text = mp3Player!.getCurrentTimeAsString()
+        progressBar.progress = mp3Player!.getProgress()
     }
+    
+    
     
     
     override func didReceiveMemoryWarning() {
